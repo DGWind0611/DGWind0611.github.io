@@ -1,35 +1,103 @@
-/* 設置網頁字體樣式 */
+/* 設置網頁字體樣式 /
+/ 設置 HTML 根元素字體為 TwitchGothic，備選字體為 sans-serif /
+/ 將 HTML 根元素高度設置為 100%，背景顏色為 #6441A5 */
 html {
-    /* 使用指定字體，如果無法加載則依次使用後面的備選字體 */
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    height: 100%;  /* 將 HTML 根元素高度設置為 100% */
-    background-color:#6441A5;
+    font-family: "TwitchGothic", sans-serif;
+    height: 100%;
+    background-color: white;
 }
 
+/* 定義 TwitchGothic 字體 */
 @font-face {
     font-family: "TwitchGothic";
     src: url("TwitchGothic.ttf");
 }
 
-p{
-    font-size: 50px;
+/* 設置 p 標籤的字體大小、位置、顏色和使用 flex 佈局 */
+p {
+    font-size: 20px;
     position: relative;
-    color: white;
+    color: #6441A5;
     display: flex;
 }
-#description{
+
+/* 設置 id 為 description 的圖片水平置中 */
+#description {
     display: block;
     margin: auto;
     position: relative;
 }
 
-.Text-Logo{
+/* 設置文字部分的 Twitch logo 水平置中 */
+.Text-Logo {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.Text #hold\&wait{
-    font-size: 50px;
+/* 設置 id 為 hold&wait 的段落文字水平置中 */
+.Text p {
+    font-size: 30px;
+    justify-content: center;
     text-align: center;
+}
+
+#hold\&wait{
+    font-size: 18px;
+}
+
+a:visited{
+    color:mediumpurple;
+}
+
+.relative_page{
+    position: absolute;
+    left: 50%;
+    bottom: 5px;
+    transform: translateX(-50%);
+}
+
+.loader{
+    font-size: 48px;
+    color: #6441A5;
+    display: inline-block;
+    font-family: "TwitchGothic", sans-serif;
+    font-weight: 400;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.loader:before{
+    content: '';
+    animation: 5s print linear alternate infinite;
+}
+.loader:after{
+    content: '';
+    position: absolute;
+    right: -4px;
+    top: 50%;
+    transform: translatey(-45%);
+    width: 2px;
+    height: 1.3em;
+    background: currentColor;
+    opacity: 0.8;
+    animation: 1s blink steps(2) infinite;
+}
+
+@keyframes blink {
+    0%  { visibility: hidden;}
+    100%  { visibility: visible;}
+}
+@keyframes print {
+    0% { content: 'L'}
+    10% { content: 'Lo'}
+    20% { content: 'Loa'}
+    30% { content: 'Load'}
+    40% { content: 'Loadi'}
+    50% { content: 'Loadin'}
+    60% { content: 'Loading'}
+    70% { content: 'Loading.'}
+    80% { content: 'Loading..'}
+    90% , 100% { content: 'Loading...'}
 }
