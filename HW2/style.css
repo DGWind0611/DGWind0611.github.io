@@ -10,7 +10,9 @@ html {
 /* 定義 TwitchGothic 字體 */
 @font-face {
     font-family: "TwitchGothic";
+    front-style: normal;
     src: url("TwitchGothic.ttf");
+    font-display: swap;
 }
 
 /* 設置 p 標籤的字體大小、位置、顏色和使用 flex 佈局 */
@@ -54,12 +56,20 @@ a:visited{
     color:purple;
 }
 
-.relative_page{
-    position: absolute;
-    left: 50%;
-    bottom: 5px;
-    transform: translateX(-50%);
+.relative_page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
 }
+
+.relative_page img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 10px;
+    width: 5vw;
+}
+
 /*對LOADING...動畫設計字行字體等並水平置中*/
 .loader{
     font-size: 48px;
