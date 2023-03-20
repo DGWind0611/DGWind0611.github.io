@@ -5,6 +5,7 @@ html {
     font-family: "TwitchGothic", sans-serif;
     height: 100%;
     background-color: white;
+    touch-action: manipulation;
 }
 
 /* 定義 TwitchGothic 字體 */
