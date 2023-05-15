@@ -1,0 +1,73 @@
+body {
+    background-color: rgba(234, 232, 111, 0.31);
+}
+
+.title {
+    font-size: 50px;
+    font-weight: bold;
+    color: lightblue;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*讓按鈕在螢幕致中*/
+
+.showData {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#showdata {
+    background-color: #008CBA;
+    color: white;
+    border-color: #008CBA;
+    font-family: "微軟正黑體", "Microsoft JhengHei", sans-serif;
+    font-size: 15px;
+}
+.choseDate{
+    font-family: "微軟正黑體", "Microsoft JhengHei", sans-serif;
+    padding-bottom: 5px;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #6b5b30;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #e1e5a2;
+}
+
+.table-container {
+    position: relative;
+}
+
+.fixed-p {
+    position: absolute;
+    top: -35px;
+    right: 0;
+    margin: 10px;
+}
+
+
+.showTable {
+    margin-top: 10px; /* 调整表格与固定文本之间的间距 */
+}
+
+.inputDate{
+    margin: 10px;
+}
+
+.dataInitDay{
+    font-family: "微軟正黑體", "Microsoft JhengHei", sans-serif;
+    font-size: 15px;
+    color: #4e46e5;
+}
