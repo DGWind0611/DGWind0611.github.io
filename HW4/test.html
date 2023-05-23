@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Date Format Conversion</title>
+  <script>
+    function formatDate() {
+      // 取得日期元素
+      var inputDate = document.getElementById('myDate').value;
+
+      // 將日期字串轉換為 Date 物件
+      var dateObj = new Date(inputDate);
+
+      // 取得年、月、日
+      var year = dateObj.getFullYear();
+      var month = ('0' + (dateObj.getMonth() + 1)).slice(-2);
+      var day = ('0' + dateObj.getDate()).slice(-2);
+
+      // 格式化為 YYYY/MM/DD 格式
+      var formattedDate = year + '/' + month + '/' + day;
+
+      // 將結果設定為新的 value
+      document.getElementById('formattedDate').value = formattedDate;
+    }
+  </script>
+</head>
+<body>
+<input type="date" id="myDate" onchange="formatDate()">
+<input type="text" id="formattedDate" readonly>
+</body>
+</html>
