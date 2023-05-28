@@ -55,3 +55,8 @@ export default {
   }
 };
 </script>
+<style>
+body {
+  background-color: rgba(234, 232, 111, 0.31);
+}
+</style>

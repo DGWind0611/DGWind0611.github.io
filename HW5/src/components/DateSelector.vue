@@ -4,7 +4,8 @@
     <form action="/action_page.php">
       <label for="myDate">查詢日期:</label>
       <input type="date" id="myDate" @change="formatDate">
-      <input class="inputDate" type="text" id="formattedDate" name="日期" v-model="selectedDate" @change="handleDateChange">
+      <input class="inputDate" type="text" id="formattedDate" name="日期" v-model="selectedDate"
+             @change="handleDateChange">
     </form>
   </div>
 </template>
@@ -13,18 +14,24 @@
 export default {
   methods: {
     formatDate(event) {
-      // 处理日期格式化的逻辑
-      // ...
+      const inputDate = event.target.value;
+      const dateObj = new Date(inputDate);
+      const year = dateObj.getFullYear();
+      const month = String(dateObj.getMonth() + 1).padStart(2, '0');
+      const day = String(dateObj.getDate()).padStart(2, '0');
+      const formattedDate = `${year}/${month}/${day}`;
+      this.selectedDate = formattedDate;
     },
     handleDateChange(event) {
-      // 处理日期变化的逻辑
-      // ...
+      this.$emit('date-change', this.selectedDate);
     }
   }
 };
 </script>
 
 <style>
-/* 组件样式 */
-/* ... */
+.choseDate{
+  font-family: "微軟正黑體", "Microsoft JhengHei", sans-serif;
+  padding-bottom: 5px;
+}
 </style>

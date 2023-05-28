@@ -38,7 +38,6 @@ export default {
   }
 };
 </script>
-
 <style>
 table {
   border-collapse: collapse;
@@ -58,7 +57,6 @@ th {
 .table-container {
   position: relative;
 }
-
 .fixed-p {
   position: absolute;
   top: -35px;
@@ -67,7 +65,4 @@ th {
 }
 
 
-.showTable {
-  margin-top: 10px; /* 调整表格与固定文本之间的间距 */
-}
 </style>
